@@ -17,25 +17,7 @@ $(function(){
         
     });
       
-    console.log($('.mem_content').position().left)
-    var q_left = $('.mem_content').position().left+1335;
     
-    var q_top = $('.mem_content').position().top;
-    console.log($('.mem_content').position().q_left)
-   
-    $(".mypage_ad").css({
-        'top':q_top,
-        'left':q_left
-    });
-    
-    $(window).scroll(function(){
-        
-        var new_top = $(window).scrollTop()+100;
-        $(".mypage_ad").stop().animate({
-        'top':new_top, 'left':q_left
-        
-    },300);
-    })
 
     $('.del_why ').change(function(){
        

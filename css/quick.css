@@ -4,20 +4,13 @@
     margin: 0;
 }
 
-.wrap{
-    width: 1500px;
-    margin: 0px auto;
-       
-    
-}
 .mypage_ad{
     width: 110px;
     border: black 1px solid ;
     height: 200px;
-    right: 100px;
+    top: 330px; left: 1631px;
     position: absolute;
-    z-index: 9999;    
-
+    z-index: 9999;
 }
 .mypage_ad_name{
     background-color: #999;
@@ -25,29 +18,13 @@
     height: 30px;
     line-height: 30px;
     text-align: center;
+    position: relative;
 }
 .img_area{
     width: 70px;
     margin: 10px auto;
     text-align: center;
 }
-.mem_leftmenu_1{
-    
-    border-collapse: collapse;
-    float: left;
-    position: relative;
-    width: 150px;
-    
-    
-    height: 540px;
-   
+.mypage_ad_name>p{
+    margin: 0;
 }
-.mem_content{
-    width: 1300px;
-    margin: 20px auto;
-    float: left;
-    
-    
-
-}
-

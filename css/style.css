@@ -11,7 +11,17 @@ a {
 li {
     list-style-type: none;
 }
-
+.h_wrap{
+    width: 100%;
+}
+.hr{
+    width: 100%;
+    height: 78.9px;
+    position: absolute;
+    top: 140px;
+    border-top: 1.5px solid rgb(211, 205, 205);
+    border-bottom: 1.5px solid rgb(211, 205, 205);
+}
 /*header_top -------------------------------------------------------*/
 
 .index_wrap { width:1490px; height: 230px;  margin:0 auto; }
@@ -19,7 +29,7 @@ li {
 .header_top {
     text-align: center;
     height: 140px;
-    border-bottom: 1.5px solid rgb(211, 205, 205);
+    /* border-bottom: 1.5px solid rgb(211, 205, 205); */
 }
 
 .header_top {
@@ -123,7 +133,7 @@ li {
 
 .header_depth1 {
     padding: 20px;
-    border-bottom: 1px solid rgb(211, 205, 205);   
+    /* border-bottom: 1px solid rgb(211, 205, 205);    */
 }
 
 .header_depth1 {
@@ -157,7 +167,11 @@ li {
 }
 
 /*footer 영역 ---------------------------------------------------*/
-
+.index_wrap1 {
+     width:100%; height: 200px; 
+      margin:0 auto; background-color: #6266ea;
+      
+    }
 .footer {
     clear: both; /*float 속성 초기화*/
     background-color: #6266ea;
@@ -165,11 +179,14 @@ li {
 }
 
 .footer > .index_size > .index_info {
-    padding: 25px;
+    padding: 10px 300px;
     line-height: 30px;
+    
+    margin: 0 auto;
 }
 
-.footer > .footer_copyRight {
+ .footer_copyRight {
     padding: 20px;
-    background-color: #4232c2;    
+    background-color: #4232c2;   
+    text-align: right; 
 }

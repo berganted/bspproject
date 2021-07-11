@@ -143,7 +143,6 @@ li {
 .header_top {
     text-align: center;
     height: 140px;
-    border-bottom: 1.5px solid rgb(211, 205, 205);
 }
 
 .header_top {
@@ -248,7 +247,7 @@ li {
 
 .header_depth1 {
     padding: 20px;
-    border-bottom: 1px solid rgb(211, 205, 205);   
+ 
 }
 
 .header_depth1 {
@@ -630,25 +629,7 @@ li {
 .pagenate li a.board.last {background:#f3f3f3 url('/img/ico_last.png') no-repeat center center;}
 .pagenate li a.current {color:#fff; background-color:#221f1f; font-weight:bold;  border:1px solid #221f1f;}
 
-/*footer 영역 ---------------------------------------------------*/
 
-.footer {
-    position: relative;
-    clear: both; /*float 속성 초기화*/
-    background-color: #6266ea;
-    color: white;
-    width: 1490px;    
-}
-
-.footer > .index_size > .index_info {
-    padding: 25px;
-    line-height: 30px;
-}
-
-.footer > .footer_copyRight {
-    padding: 20px;
-    background-color: #4232c2;    
-}
 
 /*index.html 영역 ---------------------------------------------------*/
 

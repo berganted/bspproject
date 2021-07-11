@@ -7,6 +7,11 @@
 // });
 
 $(function(){ 
+    $("#header").load("header.html");  
+    $("#footer").load("footer.html"); 
+    $("#side").load("sideCategory.html");   
+    $("#quick").load("quick.html");   
+    
     $(".header_mainMenu > ul > li >ul").hide
         
  $(".header_mainMenu >ul> li").mouseover(function(){
@@ -38,15 +43,7 @@ $(function(){
         }
      });
 
-     //console.log($('.menu').position().left)
- var q_left = $('.index_wrap').position().left+1360;
-    
- var q_top = $('.index_wrap').position().top;
 
- $(".mypage_ad").css({
-     'top': 1490,
-     'right': 90
- });
  
  $(window).scroll(function(){
      console.log($(window).scrollTop());
