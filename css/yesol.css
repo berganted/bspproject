@@ -28,7 +28,13 @@
 .button_s{
     font-size:12px; text-decoration:none !important; white-space:nowrap; display:inline-block; vertical-align:baseline; position:relative; cursor:pointer; padding:2px 10px; min-width:20px; border:2px solid #221f1f; color:#fff !important; margin:0 2px; text-align:center; font-weight:bold; border-radius:5px; background-color:#221f1f;
 }
-
+.mem_content > h1{
+    text-align: center;
+}
+#article > h4{
+    text-align: center;
+    padding: 20px 0;
+}
 /*buy_form----------------------------------------------------------------------- */
 
 #buy_tb, #buy_now, #order_tb, #order_list_tb, #return_list_tb,#return_list_detil_tb, #retrn_popup {
@@ -76,6 +82,12 @@ td{
     margin: auto;
     border-spacing: 10px
    
+}
+.hwrap > h4 {
+    padding: 10px 0;
+}
+.pwrap > p {
+    padding: 10px 0;
 }
 #retrn_product{
     width: 50%;

@@ -44,12 +44,19 @@ $(function(){
      });
 
 
- 
+     console.log($('.mySwiper ').position().left)
+    var q_left = $('.mySwiper ').position().left+1500;
+    var q_top = $('.mySwiper').position().top;
+    $(".mypage_ad").css({
+        'top':q_top+230,
+        'left':q_left
+    });
+
  $(window).scroll(function(){
      console.log($(window).scrollTop());
-     var new_top = $(window).scrollTop()+137;
+     var new_top = $(window).scrollTop()+230;
      $(".mypage_ad").stop().animate({
-     'top':new_top
+     'top':new_top, 'left':q_left
      
  },300);
  })
