@@ -13,6 +13,14 @@
     
     <title>Document</title>
     <style>
+
+.button_m{
+    font-size:14px; text-decoration:none !important; white-space:nowrap; display:inline-block; vertical-align:baseline; position:relative; cursor:pointer; padding:4px 20px; min-width:64px; border:2px solid #221f1f; color:#fff !important; margin:0 2px; text-align:center; font-weight:bold; border-radius:5px; background-color:#221f1f;
+    }
+    .button_s{
+    font-size:12px; text-decoration:none !important; white-space:nowrap; display:inline-block; vertical-align:baseline; position:relative; cursor:pointer; padding:2px 10px; min-width:20px; border:2px solid #221f1f; color:#fff !important; margin:0 2px; text-align:center; font-weight:bold; border-radius:5px; background-color:#221f1f;
+    }
+ 
         .star-input{
             margin: auto;
         }
@@ -70,7 +78,7 @@
                                 <span class="sellPrice1" style="color: rgb(231, 60, 60); font-size: 20px; font-weight: 600;">15,120원(10%할인)</span> <br>
                                 
                                 <span class="deliverInfo" style="font-size: 18px;">
-                                     배송예정 -> 경기도 고양시~ #{회원주소자동입력} ＃{주소api}
+                                     배송지 : 경기도 고양시~ 
                                 </span><br>
 
                                 <span style="font-size: 18px;"> *배송비 : 무료</span>
@@ -80,8 +88,12 @@
                 </div>
                 <div class="detail_bookPay">
                     <div class="detail_payWrap3">
-                        <span class="ing" style="font-size: 15px;">판매중</span> <br> 
-                        <input type="textarea" value="수량선택(미완성)" size="11px">
+                        <span class="ing" style="font-size: 15px;"> &emsp;&emsp;  판매중</span> <br> 
+                        <td id="ant">
+                            <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
+                            <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
+                            <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
+                            </td>
                     </div>
                     <div class="detail_payWrap1">
                        <input type="button" class="btn1" value="카트에 넣기" >
