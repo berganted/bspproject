@@ -2,7 +2,7 @@ $(function(){
     $("#header").load("header.html");  
     $("#footer").load("footer.html"); 
     $("#side").load("sideCategory.html");   
-    $("#quick").load("quick.html");   
+    $("#quick").load("quick.html");
 
     $('.radio_pwd').click(function(){
         console.log(1);
