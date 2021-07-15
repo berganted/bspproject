@@ -336,7 +336,7 @@
 
 .indexPlace > .original,.sell, .new , .lowPrice , .highPrice {
    margin: 10px 40px;
-   font-size: 17px;
+   font-size: 15px;
 
 
 }
@@ -359,33 +359,34 @@
 .SmallIndex_book{
    /*border: 3px solid black;*/
    width: 1100px;
-   height: 350px;
+   height: 330px;
    margin: auto;
    margin-top: 20px;
+   margin-bottom: -25px;
 }
 .s_bookImg{
-   margin: 40px 20px;
+   margin: 30px 20px;
    float: left;
 }
 .SmallIndex_book > .s_imgSection{
    
    float: left;
    width: 20%;
-   height: 350px;
+   height: 300px;
    
 }
 .SmallIndex_book > .s_infoSectionWrap{
-   padding: 10 auto;
+  
    float: left;
    width: 55%;
-   height: 350px;
+   height: 300px;
   
 }
 .SmallIndex_book > .s_payWrap{
    padding: 20 auto;
    float: left;
    width: 25%;
-   height: 350px;
+   height: 300px;
    
 }
 .s_infoSection{
@@ -412,17 +413,21 @@
 
 .btn1 {
    background-color: rgb(77, 77, 235);
+   margin-top: 10px;
     color: white;
-    padding: 5px 5px;
-    font-size: 7px;
+    width:70pt;height:30pt;
+    text-align: center;
+  
 
 }
 
 .btn2 {
-   background-color: blue; 
+   margin-top: 10px;
+   background-color: rgb(46, 46, 175); 
    color: white; 
-   padding: 5px 10px;
-   font-size: 17px;
+   width:70pt;height:30pt;
+   text-align: center;
+ 
    
 }
 
