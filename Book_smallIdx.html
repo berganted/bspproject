@@ -9,21 +9,10 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/big.css">
     <script src="js/main.js"></script>
+    <script src="js/big.js"></script>
     <title>Document</title>
-<script>
-    function fnCalCount(type, ths){
-        var $input = $(ths).parents("td").find("input[name='pop_out']"); //부모부분인 td의 자식 name pop_out [수량입력값]
-        var tCount = Number($input.val()); //입력값 숫자타입으로 변환
-        var tEqCount = Number($(ths).parents("tr").find("td.bseq_ea").html()); 
-                     //입력된 수량보다 +/-가 초과되지 않도록
+    <title>Document</title>
 
-        if(type=='p'){
-            if(tCount < tEqCount) $input.val(Number(tCount)+1);  //재고보다 작을경우 +1
-        }else{
-             if(tCount >0) $input.val(Number(tCount)-1);    //0보다 클 경우 -1
-            }
-}
-</script>
     <style>
     #all{
         width: 100px; 
@@ -46,28 +35,12 @@
     .button_s{
     font-size:12px; text-decoration:none !important; white-space:nowrap; display:inline-block; vertical-align:baseline; position:relative; cursor:pointer; padding:2px 10px; min-width:20px; border:2px solid #221f1f; color:#fff !important; margin:0 2px; text-align:center; font-weight:bold; border-radius:5px; background-color:#221f1f;
     }
- 
+    .number{
+        margin-left: 35px;
+    }
      
     </style>
-    <script>
 
-
-// 전체선택해제
-    const $container = document.querySelector('.container');
-    const $inputs = [...$container.children];
-    const $agreeBtn = document.querySelector('.all');
-
-    $all.onclick = () => {
-      if ($inputs.filter(input => input.checked).length === $inputs.length) {
-        $inputs.forEach(input => { input.checked = false; });
-      } else {
-        $inputs.forEach(input => {
-          input.checked = true;
-        });
-      }
-    };
-
-    </script>
 </head>
 <body>
     <div id='header'></div>
@@ -121,7 +94,7 @@
                         <a href="#" class="num">10</a>
                         <a href="/24/Category/Display/001001001003?PageNumber=11" class="click_next"> > </a>
                         <a href="/24/Category/Display/001001001003?PageNumber=48" class="click_end">>></a>   
-                        <input type="button" id = "all" name="all" value="전체 선택" >
+                        <input type='checkbox' name='bestcheck'  onclick='selectAll(this)'/> 전체선택
                              
                     </div>
                     
@@ -155,19 +128,17 @@
                 <div class="s_payWrap">
                     <div class="s_pay">
                         <div class="s_pay1">
-                            <input type="checkbox" name="checkBox" >
+                            <input type="checkbox" name="bestcheck" >
                             &nbsp;
-                            <td class="bseq_ea">500</td>
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                            <!-- <td id="ant2">
-                                <button class="button" type="button" style="padding: 3px 5px;" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button" type ="button" style="padding: 3px 5px;" onclick="fnCalCount('p',this);">+</button> 
-                            </td> -->
+                          
+                           
+                                <div class="number">
+                                    <button  class="button_s" type ="button" id="decreaseQuantity">-</button> 
+                                    <span id="numberUpDown" readonly="readonly" style="width: 50px; text-align: center;">1</span>
+                                      <button class="button_s" type="button" id="increaseQuantity">+</button>
+                                  </div> 
+                                      
+                        
                         </div>
                         <div class="s_pay2">
                             <input type="button" class="btn1" value="카트에 넣기" >
@@ -179,9 +150,9 @@
                 </div>
              </div>
              <!-- 2 -->
-            <div class="SmallIndex_book">
+             <div class="SmallIndex_book">
                 <div class="s_imgSection">
-                    <div class="s_bookImg"><img src = "img/newEye2.jpg" style="height: 250px; width: 180px;"></div>
+                    <div class="s_bookImg"><img src = "img/newEye3.jpg" style="height: 250px; width: 180px;"></div>
                 </div>
                 <div class="s_infoSectionWrap">
                     <div class="s_infoSection">
@@ -204,18 +175,17 @@
                 <div class="s_payWrap">
                     <div class="s_pay">
                         <div class="s_pay1">
-                            <input type="checkbox" name="checkBox" >
+                            <input type="checkbox" name="bestcheck" >
                             &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                            <!-- <td id="ant2">
-                                <button class="button" type="button" style="padding: 3px 5px;" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button" type ="button" style="padding: 3px 5px;" onclick="fnCalCount('p',this);">+</button> 
-                            </td> -->
+                          
+                           
+                                <div class="number">
+                                    <button  class="button_s" type ="button" id="decreaseQuantity">-</button> 
+                                    <span id="numberUpDown" readonly="readonly" style="width: 50px; text-align: center;">1</span>
+                                      <button class="button_s" type="button" id="increaseQuantity">+</button>
+                                  </div> 
+                                      
+                        
                         </div>
                         <div class="s_pay2">
                             <input type="button" class="btn1" value="카트에 넣기" >
@@ -252,18 +222,13 @@
                 <div class="s_payWrap">
                     <div class="s_pay">
                         <div class="s_pay1">
-                            <input type="checkbox" name="checkBox" >
+                            <input type="checkbox" name="bestcheck" >
                             &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                            <!-- <td id="ant2">
-                                <button class="button" type="button" style="padding: 3px 5px;" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button" type ="button" style="padding: 3px 5px;" onclick="fnCalCount('p',this);">+</button> 
-                            </td> -->
+                            <div class="number">
+                                <button  class="button_s" type ="button" id="decreaseQuantity">-</button> 
+                                <span id="numberUpDown" readonly="readonly" style="width: 50px; text-align: center;">1</span>
+                                  <button class="button_s" type="button" id="increaseQuantity">+</button>
+                              </div> 
                         </div>
                         <div class="s_pay2">
                             <input type="button" class="btn1" value="카트에 넣기" >
@@ -300,18 +265,13 @@
                 <div class="s_payWrap">
                     <div class="s_pay">
                         <div class="s_pay1">
-                            <input type="checkbox" name="checkBox" >
+                            <input type="checkbox" name="bestcheck" >
                             &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                            <!-- <td id="ant2">
-                                <button class="button" type="button" style="padding: 3px 5px;" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button" type ="button" style="padding: 3px 5px;" onclick="fnCalCount('p',this);">+</button> 
-                            </td> -->
+                            <div class="number">
+                                <button  class="button_s" type ="button" id="decreaseQuantity">-</button> 
+                                <span id="numberUpDown" readonly="readonly" style="width: 50px; text-align: center;">1</span>
+                                  <button class="button_s" type="button" id="increaseQuantity">+</button>
+                              </div> 
                         </div>
                         <div class="s_pay2">
                             <input type="button" class="btn1" value="카트에 넣기" >
@@ -349,18 +309,13 @@
                 <div class="s_payWrap">
                     <div class="s_pay">
                         <div class="s_pay1">
-                            <input type="checkbox" name="checkBox" >
+                            <input type="checkbox" name="bestcheck" >
                             &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                            <!-- <td id="ant2">
-                                <button class="button" type="button" style="padding: 3px 5px;" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button" type ="button" style="padding: 3px 5px;" onclick="fnCalCount('p',this);">+</button> 
-                            </td> -->
+                            <div class="number">
+                                <button  class="button_s" type ="button" id="decreaseQuantity">-</button> 
+                                <span id="numberUpDown" readonly="readonly" style="width: 50px; text-align: center;">1</span>
+                                  <button class="button_s" type="button" id="increaseQuantity">+</button>
+                              </div> 
                         </div>
                         <div class="s_pay2">
                             <input type="button" class="btn1" value="카트에 넣기" >

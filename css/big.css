@@ -354,11 +354,12 @@ a {
 .clickNum {
    position: relative;
    font-size: 15px;
-   margin-top: 20px;
+   margin-top: 10px;
+ 
    margin-left: 40px;
 }
 .clickNum > *{
-   margin: 15px 10px;
+   margin: 15px 20px 10px 10px;
 }
 .SmallIndex_book{
    /*border: 3px solid black;*/
