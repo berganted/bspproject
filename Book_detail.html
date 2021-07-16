@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/big.css">
     <script src="js/main.js"></script>
+    <script src="js/big.js"></script>
+    
     
     <title>Document</title>
     <style>
@@ -89,20 +91,17 @@
                 <div class="detail_bookPay">
                     <div class="detail_payWrap3">
                         <span class="ing" style="font-size: 15px;"> &emsp;&emsp;  판매중</span> <br> 
-                        <!-- <td class="bseq_ea">500</td>
-                        <tr>
-                        <td id="ant">
-                            <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                            <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                            <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                        </td> -->
-                     </tr>
+                      <div class="number" >
+                        <button  class="button_s" type ="button" id="decreaseQuantity">-</button> 
+                        <input type="number" id="numberUpDown"  style="width: 50px; text-align: center;" value="1">
+                          <button class="button_s" type="button" id="increaseQuantity">+</button>
+                      </div> 
                     </div>
                     <div class="detail_payWrap1">
-                       <input type="button" class="btn1" value="카트에 넣기" >
+                       <input type="button" class="btn1" value="카트에 넣기" style="margin-left: 20px;">
                     </div>
                     <div class="detail_payWrap2">
-                        <input type="button"  class="btn2" value="바로구매">
+                        <input type="button"  class="btn2" value="바로구매" style="margin-left: 20px;" >
                     </div>
                 </div>   
             </div>

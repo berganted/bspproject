@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/big.css">
     <script src="js/main.js"></script>
+    <script src="js/big.js"></script>
     <title>Document</title>
 
     <style>
@@ -117,6 +118,7 @@
   })
 }
     </script>
+
 </head>
 <body>
     <div id='header'></div>
@@ -279,16 +281,11 @@
                         <div class="s_pay1">
                             <input type="checkbox" name="bestcheck" >
                             &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                            <!-- <td id="ant2">
-                                <button class="button" type="button" style="padding: 3px 5px;" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button" type ="button" style="padding: 3px 5px;" onclick="fnCalCount('p',this);">+</button> 
-                            </td> -->
+                            <div class="number" style="margin-left: 40px;">
+                                <button  class="button_s" type ="button" id="decreaseQuantity">-</button> 
+                                <input type="number" id="numberUpDown"  style="width: 50px; text-align: center;" value="1">
+                                  <button class="button_s" type="button" id="increaseQuantity">+</button>
+                              </div> 
                         </div>
                         <div class="s_pay2">
                             <input type="button" class="btn1" value="카트에 넣기" >
@@ -329,16 +326,11 @@
                         <div class="s_pay1">
                             <input type="checkbox" name="bestcheck" >
                             &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                            <!-- <td id="ant2">
-                                <button class="button" type="button" style="padding: 3px 5px;" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button" type ="button" style="padding: 3px 5px;" onclick="fnCalCount('p',this);">+</button> 
-                            </td> -->
+                            <div class="number" style="margin-left: 50px;">
+                                <button  class="button_s" type ="button" id="decreaseQuantity">-</button> 
+                                <input type="number" id="numberUpDown"  style="width: 50px; text-align: center;" value="1">
+                                  <button class="button_s" type="button" id="increaseQuantity">+</button>
+                              </div> 
                         </div>
                         <div class="s_pay2">
                             <input type="button" class="btn1" value="카트에 넣기" >
@@ -379,16 +371,11 @@
                         <div class="s_pay1">
                             <input type="checkbox" name="bestcheck" >
                             &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                            <!-- <td id="ant2">
-                                <button class="button" type="button" style="padding: 3px 5px;" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button" type ="button" style="padding: 3px 5px;" onclick="fnCalCount('p',this);">+</button> 
-                            </td> -->
+                            <div class="number" style="margin-left: 50px;">
+                                <button  class="button_s" type ="button" id="decreaseQuantity">-</button> 
+                                <input type="number" id="numberUpDown"  style="width: 50px; text-align: center;" value="1">
+                                  <button class="button_s" type="button" id="increaseQuantity">+</button>
+                              </div> 
                         </div>
                         <div class="s_pay2">
                             <input type="button" class="btn1" value="카트에 넣기" >
@@ -429,16 +416,11 @@
                         <div class="s_pay1">
                             <input type="checkbox" name="bestcheck" >
                             &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                            <!-- <td id="ant2">
-                                <button class="button" type="button" style="padding: 3px 5px;" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button" type ="button" style="padding: 3px 5px;" onclick="fnCalCount('p',this);">+</button> 
-                            </td> -->
+                            <div class="number">
+                                <button  class="button_s" type ="button" id="decreaseQuantity">-</button> 
+                                <input type="number" id="numberUpDown"  style="width: 50px; text-align: center;" value="1">
+                                  <button class="button_s" type="button" id="increaseQuantity">+</button>
+                              </div> 
                         </div>
                         <div class="s_pay2">
                             <input type="button" class="btn1" value="카트에 넣기" >
@@ -479,11 +461,13 @@
                         <div class="s_pay1">
                             <input type="checkbox" name="bestcheck" >
                             &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
+                           
+                           
+                            <div class="number">
+                                <button  class="button_s" type ="button" id="decreaseQuantity">-</button> 
+                                <input type="number" id="numberUpDown"  style="width: 50px; text-align: center;" value="1">
+                                  <button class="button_s" type="button" id="increaseQuantity">+</button>
+                              </div> 
                         
                         </div>
                         <div class="s_pay2">
@@ -495,238 +479,8 @@
                     </div>
                 </div>
              </div>
-             <hr>
-             <!-- 6 -->
-            <div class="SmallIndex_book">
-                <div class="s_imgSection">
-                    <div class="best_rank" style="font-size: 19px;">6.</div>
-                    <div class="s_bookImg"><img src = "img/newStar4.jpg" style="height: 250px; width: 180px; margin:-20px"></div>
-                </div>
-                <div class="s_infoSectionWrap">
-                    <div class="s_infoSection">
-                        <span class="s_bookTitle" style="font-size: 20px;">
-                            <b>임신 출산 육아  대백과</b>
-                        </span>
-                        <span class="s_bookAuthor" style="font-size: 17px;">편집부 저 <span class="s_bookPub"> | 삼성출판사</span><span class="s_bookDate"> | 2020년 7월</span> </span>
-                        <span class="s_price"><b>17,550</b>원 (10%할인)  &nbsp; 적립금 : 970원</span>
-                        <span class="s_grade">회원리뷰(8건) ★★★★★ 9.3</span>
-                        
-                        <span class="s_story">
-                            『임신 출산 육아 대백과』 2020년 개정판은 가이드 구성에 충실, 
-                            초보엄마들이 궁금해할만한 내용을 사진으로 꼼꼼하게 보여준다. 임신 중 요가, 산후조리, 
-                            육아의 기초(신생아 목욕시키기, 옷 입히기 등)의 과정을 사진으로 보여주어 슬라이드를 넘기듯
-                             한눈에 육아의 기초를 알 수 있다. 
-                            임신, 출산, 육아의 각 단계를 ...
-                        </span>
-                    </div>
-                </div>
-                <div class="s_payWrap">
-                    <div class="s_pay">
-                        <div class="s_pay1">
-                            <input type="checkbox" name="bestcheck" >
-                            &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                        
-                        </div>
-                        <div class="s_pay2">
-                            <input type="button" class="btn1" value="카트에 넣기" >
-                        </div>
-                        <div class="s_pay3">
-                            <input type="button"  class="btn2" value="바로구매">
-                        </div>
-                    </div>
-                </div>
-             </div>
-             <hr>
-             <!-- 7 -->
-            <div class="SmallIndex_book">
-                <div class="s_imgSection">
-                    <div class="best_rank" style="font-size: 19px;">7.</div>
-                    <div class="s_bookImg"><img src = "img/newStar4.jpg" style="height: 250px; width: 180px; margin:-20px"></div>
-                </div>
-                <div class="s_infoSectionWrap">
-                    <div class="s_infoSection">
-                        <span class="s_bookTitle" style="font-size: 20px;">
-                            <b>임신 출산 육아  대백과</b>
-                        </span>
-                        <span class="s_bookAuthor" style="font-size: 17px;">편집부 저 <span class="s_bookPub"> | 삼성출판사</span><span class="s_bookDate"> | 2020년 7월</span> </span>
-                        <span class="s_price"><b>17,550</b>원 (10%할인)  &nbsp; 적립금 : 970원</span>
-                        <span class="s_grade">회원리뷰(8건) ★★★★★ 9.3</span>
-                        
-                        <span class="s_story">
-                            『임신 출산 육아 대백과』 2020년 개정판은 가이드 구성에 충실, 
-                            초보엄마들이 궁금해할만한 내용을 사진으로 꼼꼼하게 보여준다. 임신 중 요가, 산후조리, 
-                            육아의 기초(신생아 목욕시키기, 옷 입히기 등)의 과정을 사진으로 보여주어 슬라이드를 넘기듯
-                             한눈에 육아의 기초를 알 수 있다. 
-                            임신, 출산, 육아의 각 단계를 ...
-                        </span>
-                    </div>
-                </div>
-                <div class="s_payWrap">
-                    <div class="s_pay">
-                        <div class="s_pay1">
-                            <input type="checkbox" name="bestcheck" >
-                            &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                        
-                        </div>
-                        <div class="s_pay2">
-                            <input type="button" class="btn1" value="카트에 넣기" >
-                        </div>
-                        <div class="s_pay3">
-                            <input type="button"  class="btn2" value="바로구매">
-                        </div>
-                    </div>
-                </div>
-             </div>
-             <hr>
-             <!-- 8 -->
-            <div class="SmallIndex_book">
-                <div class="s_imgSection">
-                    <div class="best_rank" style="font-size: 19px;">8.</div>
-                    <div class="s_bookImg"><img src = "img/newStar4.jpg" style="height: 250px; width: 180px; margin:-20px"></div>
-                </div>
-                <div class="s_infoSectionWrap">
-                    <div class="s_infoSection">
-                        <span class="s_bookTitle" style="font-size: 20px;">
-                            <b>임신 출산 육아  대백과</b>
-                        </span>
-                        <span class="s_bookAuthor" style="font-size: 17px;">편집부 저 <span class="s_bookPub"> | 삼성출판사</span><span class="s_bookDate"> | 2020년 7월</span> </span>
-                        <span class="s_price"><b>17,550</b>원 (10%할인)  &nbsp; 적립금 : 970원</span>
-                        <span class="s_grade">회원리뷰(8건) ★★★★★ 9.3</span>
-                        
-                        <span class="s_story">
-                            『임신 출산 육아 대백과』 2020년 개정판은 가이드 구성에 충실, 
-                            초보엄마들이 궁금해할만한 내용을 사진으로 꼼꼼하게 보여준다. 임신 중 요가, 산후조리, 
-                            육아의 기초(신생아 목욕시키기, 옷 입히기 등)의 과정을 사진으로 보여주어 슬라이드를 넘기듯
-                             한눈에 육아의 기초를 알 수 있다. 
-                            임신, 출산, 육아의 각 단계를 ...
-                        </span>
-                    </div>
-                </div>
-                <div class="s_payWrap">
-                    <div class="s_pay">
-                        <div class="s_pay1">
-                            <input type="checkbox" name="bestcheck" >
-                            &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                        
-                        </div>
-                        <div class="s_pay2">
-                            <input type="button" class="btn1" value="카트에 넣기" >
-                        </div>
-                        <div class="s_pay3">
-                            <input type="button"  class="btn2" value="바로구매">
-                        </div>
-                    </div>
-                </div>
-             </div>
-             <hr>
-             <!-- 9 -->
-            <div class="SmallIndex_book">
-                <div class="s_imgSection">
-                    <div class="best_rank" style="font-size: 19px;">9.</div>
-                    <div class="s_bookImg"><img src = "img/newStar4.jpg" style="height: 250px; width: 180px; margin:-20px"></div>
-                </div>
-                <div class="s_infoSectionWrap">
-                    <div class="s_infoSection">
-                        <span class="s_bookTitle" style="font-size: 20px;">
-                            <b>임신 출산 육아  대백과</b>
-                        </span>
-                        <span class="s_bookAuthor" style="font-size: 17px;">편집부 저 <span class="s_bookPub"> | 삼성출판사</span><span class="s_bookDate"> | 2020년 7월</span> </span>
-                        <span class="s_price"><b>17,550</b>원 (10%할인)  &nbsp; 적립금 : 970원</span>
-                        <span class="s_grade">회원리뷰(8건) ★★★★★ 9.3</span>
-                        
-                        <span class="s_story">
-                            『임신 출산 육아 대백과』 2020년 개정판은 가이드 구성에 충실, 
-                            초보엄마들이 궁금해할만한 내용을 사진으로 꼼꼼하게 보여준다. 임신 중 요가, 산후조리, 
-                            육아의 기초(신생아 목욕시키기, 옷 입히기 등)의 과정을 사진으로 보여주어 슬라이드를 넘기듯
-                             한눈에 육아의 기초를 알 수 있다. 
-                            임신, 출산, 육아의 각 단계를 ...
-                        </span>
-                    </div>
-                </div>
-                <div class="s_payWrap">
-                    <div class="s_pay">
-                        <div class="s_pay1">
-                            <input type="checkbox" name="bestcheck" >
-                            &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                        
-                        </div>
-                        <div class="s_pay2">
-                            <input type="button" class="btn1" value="카트에 넣기" >
-                        </div>
-                        <div class="s_pay3">
-                            <input type="button"  class="btn2" value="바로구매">
-                        </div>
-                    </div>
-                </div>
-             </div>
-             <hr>
-             <!-- 10 -->
-            <div class="SmallIndex_book">
-                <div class="s_imgSection">
-                    <div class="best_rank" style="font-size: 19px;">10.</div>
-                    <div class="s_bookImg"><img src = "img/newStar4.jpg" style="height: 250px; width: 180px; margin:-20px"></div>
-                </div>
-                <div class="s_infoSectionWrap">
-                    <div class="s_infoSection">
-                        <span class="s_bookTitle" style="font-size: 20px;">
-                            <b>임신 출산 육아  대백과</b>
-                        </span>
-                        <span class="s_bookAuthor" style="font-size: 17px;">편집부 저 <span class="s_bookPub"> | 삼성출판사</span><span class="s_bookDate"> | 2020년 7월</span> </span>
-                        <span class="s_price"><b>17,550</b>원 (10%할인)  &nbsp; 적립금 : 970원</span>
-                        <span class="s_grade">회원리뷰(8건) ★★★★★ 9.3</span>
-                        
-                        <span class="s_story">
-                            『임신 출산 육아 대백과』 2020년 개정판은 가이드 구성에 충실, 
-                            초보엄마들이 궁금해할만한 내용을 사진으로 꼼꼼하게 보여준다. 임신 중 요가, 산후조리, 
-                            육아의 기초(신생아 목욕시키기, 옷 입히기 등)의 과정을 사진으로 보여주어 슬라이드를 넘기듯
-                             한눈에 육아의 기초를 알 수 있다. 
-                            임신, 출산, 육아의 각 단계를 ...
-                        </span>
-                    </div>
-                </div>
-                <div class="s_payWrap">
-                    <div class="s_pay">
-                        <div class="s_pay1">
-                            <input type="checkbox" name="bestcheck" >
-                            &nbsp;
-                            <td id="ant">
-                                <button class="button_s" type="button" onclick="fnCalCount('m', this);">-</button>
-                                <input  type="text" name="pop_out" value="1" readonly="readonly" style="width: 50px; text-align: center;">
-                                <button  class="button_s" type ="button" onclick="fnCalCount('p',this);">+</button> 
-                                </td>
-                        
-                        </div>
-                        <div class="s_pay2">
-                            <input type="button" class="btn1" value="카트에 넣기" >
-                        </div>
-                        <div class="s_pay3">
-                            <input type="button"  class="btn2" value="바로구매">
-                        </div>
-                    </div>
-                </div>
-             </div>
-             <hr>
-
+           
+         
 
 
           
